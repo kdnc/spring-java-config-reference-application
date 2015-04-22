@@ -11,5 +11,8 @@
   <h1>Security</h1>
   <h2>Basic Securing web</h2>
   <a href="security/basic-securing-web/">Basic Securing Web</a>
+
+  <h2>REST examples</h2>
+  <a href="rest/examples">Rest example page</a>
 </body>
 </html>

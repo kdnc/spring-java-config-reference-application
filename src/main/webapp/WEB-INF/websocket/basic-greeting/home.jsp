@@ -4,8 +4,8 @@
 <html>
 <head>
 	<title>WebSocket</title>
-    <script src="/spring-code-snippets/resources/js/sockjs-0.3.4.js"></script>
-    <script src="/spring-code-snippets/resources/js/stomp.js"></script>
+    <script src="/spring-java-config-reference-application/resources/js/sockjs-0.3.4.js"></script>
+    <script src="/spring-java-config-reference-application/resources/js/stomp.js"></script>
     <script type="text/javascript">
 
         var stompClient = null;
@@ -19,7 +19,7 @@
 
         // open a connection to "/spring-code-snippets/hello"
         function connectClicked(){
-            var socket = new SockJS('/spring-code-snippets/hello');
+            var socket = new SockJS('/spring-java-config-reference-application/hello');
             stompClient = Stomp.over(socket);
             stompClient.connect({}, function(frame){
                 setConnected(true);

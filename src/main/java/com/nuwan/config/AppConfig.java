@@ -19,6 +19,9 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 //@ComponentScan(basePackages = {“”}), this is the same as <context:component-scan base-package=””/>
 @ComponentScan( basePackages = "com.nuwan.stockticker" )
 //@EnableWebMVC, this is the same as <mvc:annotation-driven/>
+//In the case of REST, @EnableWebMVC detect the existence of Jackson and JAXB 2 on the classpath
+// and automatically creates and registers default JSON and XML converters. When more complex configuration is
+// needed, remove the @EnableWebMVC annotation and extend WebMvcConfigurationSupport directly.
 @EnableWebMvc
 public class AppConfig extends WebMvcConfigurerAdapter {
 

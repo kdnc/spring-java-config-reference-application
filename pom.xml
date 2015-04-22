@@ -54,6 +54,7 @@
           <version>${org.springframework.security-version}</version>
       </dependency>
 
+      <!--Content marshalling and unmarshalling for the REST API-->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
