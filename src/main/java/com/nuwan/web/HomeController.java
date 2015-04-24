@@ -15,4 +15,20 @@ public class HomeController {
     return "home";
   }
 
+    @RequestMapping(value = "rest/examples", method = RequestMethod.GET)
+    public String restExamples(){
+        return "rest/examples/home";
+    }
+
+    @RequestMapping(value = "hibernate/xml/examples", method = RequestMethod.GET)
+    public String hibernateXmlExamples(){
+        return "hibernate/xml/home";
+    }
+
+
+    @RequestMapping(value = "hibernate/annotation/examples", method = RequestMethod.GET)
+    public String hibernateAnnotationExamples(){
+        return "hibernate/annotation/home";
+    }
+
 }

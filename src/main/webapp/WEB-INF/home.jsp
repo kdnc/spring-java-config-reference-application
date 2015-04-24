@@ -14,5 +14,11 @@
 
   <h2>REST examples</h2>
   <a href="rest/examples">Rest example page</a>
+
+  <h2>Hibernate XML mapping examples</h2>
+  <a href="hibernate/xml/examples">Hibernate XML mapping examples</a>
+
+  <h2>Hibernate annotation examples</h2>
+  <a href="hibernate/annotation/examples">Hibernate annotation examples</a>
 </body>
 </html>
