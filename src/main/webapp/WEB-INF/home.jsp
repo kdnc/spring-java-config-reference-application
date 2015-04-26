@@ -20,5 +20,9 @@
 
   <h2>Hibernate annotation examples</h2>
   <a href="hibernate/annotation/examples">Hibernate annotation examples</a>
+
+
+  <h2>User Locales</h2>
+  <a href="mvcExamples/userLocales/resovlingUserLocales/home">Resolving User Locales</a>
 </body>
 </html>
