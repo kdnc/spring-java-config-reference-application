@@ -7,8 +7,8 @@
 
     <h2>Resolving User Locales</h2>
 
-    <a href="example?language=en_US">en_US example</a><br />
-    <a href="example?language=de">de example</a>
+    <a href="#spring-api/spring-mvc/user-locales/resolving-user-locales/example?language=en_US">en_US example</a><br />
+    <a href="#spring-api/spring-mvc/user-locales/resolving-user-locales/example?language=de">de example</a>
 
     <p>In a Spring MVC application, a user’s locale is identified by a locale resolver, which has to implement the
         LocaleResolver interface.</p>

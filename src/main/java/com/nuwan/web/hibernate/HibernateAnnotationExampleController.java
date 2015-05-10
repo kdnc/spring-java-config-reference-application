@@ -12,7 +12,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "hibernate/annotation/courses")
+@RequestMapping(value = "data-persistence-orm-transactions/orm/hibernate-annotation/courses")
 public class HibernateAnnotationExampleController {
 
     @RequestMapping(method = RequestMethod.GET)

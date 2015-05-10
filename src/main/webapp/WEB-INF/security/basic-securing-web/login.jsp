@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form method="POST" action="login">
+<form method="POST" action="http://localhost:8080/spring-java-config-reference-application/security/basic-securing-web/login">
     <table>
         <tr>
             <td>Username: </td>

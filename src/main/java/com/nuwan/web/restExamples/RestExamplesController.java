@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "rest/examples/courses")
+@RequestMapping(value = "spring-rest/spring-rest/examples/courses")
 public class RestExamplesController {
 
     @RequestMapping(method = RequestMethod.GET)

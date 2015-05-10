@@ -6,6 +6,6 @@
 </head>
 <body>
     <h1>Welcome !</h1>
-    <p>Click <a href="admin">here</a> to access a protected page.</p>
+    <p>Click <a href="#spring-api/security/basic-securing-web/admin">here</a> to access a protected page.</p>
 </body>
 </html>

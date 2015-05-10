@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<!-- 
+Content Delivery Network (CDN) Benefits
+--------------------------------------
+* Caching of scripts
+* Support for http and https
+* Regional servers – decreased latency
+* Allows for more concurrent calls (parallelism)
+
+CDN Providers
+------------
+Google, Microsoft, jQuery and others provide CDNs that host scripts such as jQuery: 
+-->
+<html>
+<head>
+    <title>Using a CDN with a Fallback</title>
+    <!-- No protocol defined. Browser will automatically use the protocol that page uses. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <!-- <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>-->
+    <script>
+        // If there was a problem loading a script from a CDN you can provide a local fallback:
+        window.jQuery || document.write("<script src='../../js/jquery.js'><\/script>");
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#content").html("Script loaded!");
+        });
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>

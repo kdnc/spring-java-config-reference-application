@@ -15,18 +15,18 @@ public class HomeController {
     return "home";
   }
 
-    @RequestMapping(value = "rest/examples", method = RequestMethod.GET)
+    @RequestMapping(value = "spring-rest/spring-rest", method = RequestMethod.GET)
     public String restExamples(){
         return "rest/examples/home";
     }
 
-    @RequestMapping(value = "hibernate/xml/examples", method = RequestMethod.GET)
+    @RequestMapping(value = "data-persistence-orm-transactions/orm/hibernate-xml-mapping", method = RequestMethod.GET)
     public String hibernateXmlExamples(){
         return "hibernate/xml/home";
     }
 
 
-    @RequestMapping(value = "hibernate/annotation/examples", method = RequestMethod.GET)
+    @RequestMapping(value = "data-persistence-orm-transactions/orm/hibernate-annotation", method = RequestMethod.GET)
     public String hibernateAnnotationExamples(){
         return "hibernate/annotation/home";
     }

@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "mvcExamples/userLocales/resovlingUserLocales")
+@RequestMapping(value = "spring-mvc/user-locales/resolving-user-locales")
 public class ResolvingUserLocalesController {
 
-    @RequestMapping(value = "home", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String showResolvingLocaleHomePage(){
         return "mvcExamples/userLocales/resolvingUserLocales/home";
     }

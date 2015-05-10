@@ -7,7 +7,7 @@
 
     <h2>Rest example urls</h2>
 
-    <a href="examples/courses">Rest Examples greetings</a>
+    <a href="#spring-api/spring-rest/spring-rest/examples/courses">Rest Examples greetings</a>
 
 </body>
 </html>

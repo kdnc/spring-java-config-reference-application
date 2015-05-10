@@ -7,7 +7,7 @@
 
 <h2>Hibernate annotation example urls</h2>
 
-<a href="courses">Find all courses</a>
+<a href="#spring-api/data-persistence-orm-transactions/orm/hibernate-xml-mapping/courses">Find all courses</a>
 
 </body>
 </html>

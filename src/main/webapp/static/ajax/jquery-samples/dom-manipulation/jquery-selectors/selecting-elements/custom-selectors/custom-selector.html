@@ -1,0 +1,56 @@
+﻿<style type="text/css">
+    .hidden {
+        display: none;
+    }
+    .panel
+    {
+        border:1px solid black;
+        margin-bottom:5px;
+    }
+</style>
+
+<script>
+
+    // Define custom filter by extending $.expr[":"]
+    $.extend($.expr[":"], {
+        hiddenPanel: function (pnl) {
+            if (pnl === null) return false;
+            var $pnl = $(pnl);
+            return $pnl.css("display") == "none" ||
+                   $pnl.css("visibility") == "hidden" ||
+                   $pnl.hasClass("hidden");
+        }
+    });
+
+    $(document).ready(function () {
+        $('#showPanelsButton').click(function () {
+            // Use custom selector like this
+            $("div:hiddenPanel")
+                .removeClass("hidden")
+                .css({ "display": "", "visibility": "" });
+        });
+    });
+
+</script>
+
+<div>
+    Creating a Custom jQuery Selector
+    <br />
+    <br />
+    <button id="showPanelsButton">Show Hidden Panels</button>
+    <br />
+    <br />
+    <div class="panel hidden">
+        Panel 1
+    </div>
+    <div class="panel" style="visibility: hidden;">
+        Panel 2
+    </div>
+    <div class="panel" style="display: none;">
+        Panel 3
+    </div>
+    <div class="panel">
+        Panel 4
+    </div>
+</div>
+

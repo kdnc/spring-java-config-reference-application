@@ -35,6 +35,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 //        Declare our static resources. Same as following xml config.
 //        <mvc:resources mapping="/resources/**" location="/resources/" />
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+
+        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
     }
 
     @Bean

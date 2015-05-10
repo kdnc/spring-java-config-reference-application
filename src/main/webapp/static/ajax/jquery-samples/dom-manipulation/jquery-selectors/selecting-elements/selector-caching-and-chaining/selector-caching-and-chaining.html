@@ -1,0 +1,56 @@
+﻿<script>
+    // Cache selectors to avoid re-querying the DOM.
+    // If a selector is used more than once, it is better to cache it.
+    var $emailContainer;
+
+    $(document).ready(function () {
+        $emailContainer = $("#emailContainer");
+        // Following is a chained method.
+        $emailContainer
+            .attr("title", "Emails")
+            .click(function () {
+                alert("Clicked container");
+            });
+
+        updatePanels($emailContainer);
+        updatePanels($("#ordersContainer"));
+
+    });
+
+    //function updatePanels($context) {
+    //    $("div.panel", $context).each(function (i) {
+    //        $(this).html("Panel " + i);
+    //    });
+    //}
+
+
+    function updatePanels($context) {
+        // Defining a selector context and then selecting elements
+        // Instead of using $context.find("div.panel") you could also use it like this.
+        // $("div.panel", $context)
+        $context.find("div.panel").each(function (i) {
+            // Use $(this) in callback functions to access the target element:
+            // `this` is the raw DOM element `$(this)` is the jQuerywrapped DOM element
+            $(this).html("Panel " + i);
+        });
+    }
+</script>
+<div>
+    <div id="emailContainer">
+        <div class="panel">
+            
+        </div>
+        <div class="panel">
+            
+        </div>
+    </div>
+    <div id="ordersContainer">
+        <div class="panel">
+            
+        </div>
+        <div class="panel">
+            
+        </div>
+    </div>
+
+</div>
