@@ -1,0 +1,80 @@
+﻿<!-- widget grid -->
+<section id="widget-grid" class="">
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- NEW WIDGET START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-orange" id="wid-id-0" data-widget-editbutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i> </span>
+                    <h2>Organizing view </h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget edit box -->
+                    <div class="jarviswidget-editbox">
+                        <!-- This area used as dropdown edit box -->
+
+                    </div>
+                    <!-- end widget edit box -->
+
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <h2 class="alert alert-info"> Manage and Configure POJOs with Spring IOC</h2>
+                        <span><strong>Generated Sequence: </strong></span><span id="block1"></span>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+
+        </article>
+        <!-- WIDGET END -->
+
+
+    </div>
+
+    <!-- end row -->
+
+    <!-- row -->
+
+    <div class="row">
+
+    </div>
+
+    <!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var pathname = location.pathname.split("/static").splice(0)[0];
+        var url = location.origin + pathname + "/spring-core-tasks/manage-and-configure-pojos-with-spring-ioc";
+
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url,
+            success: function(result){
+                $("#block1").html(result);
+            }
+        });
+    });
+
+</script>
+
