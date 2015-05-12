@@ -1,25 +1,30 @@
 package com.nuwan.model;
 
-public class SequenceGenerator {
+import java.beans.ConstructorProperties;
+
+public class SequenceGeneratorV2 {
     private String prefix;
     private String suffix;
     private int initial;
     private int counter;
-    public SequenceGenerator() {}
-    public SequenceGenerator(String prefix, String suffix, int initial) {
+    public SequenceGeneratorV2() {}
+    public SequenceGeneratorV2(String prefix, String suffix, int initial) {
         this.prefix = prefix;
         this.suffix = suffix;
         this.initial = initial;
     }
-    public SequenceGenerator(String prefix, String suffix) {
+    @ConstructorProperties({"prefix", "suffix"})
+    public SequenceGeneratorV2(String prefix, String suffix) {
         this.prefix = prefix;
         this.suffix = suffix;
     }
-    public SequenceGenerator(String prefix, int initial) {
+    @ConstructorProperties({"prefix", "initial"})
+    public SequenceGeneratorV2(String prefix, int initial) {
         this.prefix = prefix;
         this.initial = initial;
     }
-    public SequenceGenerator(int initial, String suffix) {
+    @ConstructorProperties({"initial", "suffix"})
+    public SequenceGeneratorV2(int initial, String suffix) {
         this.initial = initial;
         this.suffix = suffix;
     }

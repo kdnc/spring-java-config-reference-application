@@ -13,12 +13,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/spring-core-tasks/manage-and-configure-pojos-with-spring-ioc")
 public class ManageAndConfigurePOJOsWithSpringIOCController {
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "property-setting-method-1", method = RequestMethod.GET)
     @ResponseBody
-    public String home() {
+    public String propertySettingMethod1() {
         ApplicationContext context = new GenericXmlApplicationContext("beans.xml");
         SequenceGenerator generator = (SequenceGenerator) context.getBean("sequenceGenerator");
         return generator.getSequence();
     }
 
+    @RequestMapping(value = "property-setting-method-2", method = RequestMethod.GET)
+    @ResponseBody
+    public String propertySettingMethod2() {
+        ApplicationContext context = new GenericXmlApplicationContext("beans.xml");
+        SequenceGenerator generator = (SequenceGenerator) context.getBean("sequenceGenerator2");
+        return generator.getSequence();
+    }
 }

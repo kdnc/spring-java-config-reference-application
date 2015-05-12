@@ -28,10 +28,16 @@
                     <!-- widget content -->
                     <div class="widget-body">
 
-                        <h2 class="alert alert-info"> Manage and Configure POJOs with Spring IOC</h2>
-                        <p><span><strong>Generated Sequence using property setting method 1: </strong></span><span id="property-setting-method-1-block"></span></p>
-                        <p><span><strong>Generated Sequence using property setting method 2: </strong></span><span id="property-setting-method-2-block"></span></p>
-
+                        <h2 class="alert alert-info"> Create POJOs by Invoking a Constructor</h2>
+                        <p><span><strong>Generated Sequence using consturctor setting no ambiguity method: </strong>
+                            </span><span id="constructor-setting-no-ambiguity-block"></span>
+                        </p>
+                        <p><span><strong>Generated Sequence using consturctor setting ambiguity resolving method: </strong>
+                            </span><span id="constructor-setting-with-ambiguity-resolving-block"></span>
+                        </p>
+                        <p><span><strong>Generated Sequence using consturctor setting ambiguity resolving method 2: </strong>
+                            </span><span id="constructor-setting-with-ambiguity-resolving-block-2"></span>
+                        </p>
                     </div>
                     <!-- end widget content -->
 
@@ -66,23 +72,31 @@
 
         var pathname = location.pathname.split("/static").splice(0)[0];
 
-        var url1 = location.origin + pathname + "/spring-core-tasks/manage-and-configure-pojos-with-spring-ioc/property-setting-method-1";
+        var url1 = location.origin + pathname + "/spring-core-tasks/create-pojos-by-invoking-a-constructor/constructor-setting-no-ambiguity";
         $.ajax({
             type: "GET",
             dataType: "html",
             url: url1,
             success: function(result){
-                $("#property-setting-method-1-block").html(result);
+                $("#constructor-setting-no-ambiguity-block").html(result);
             }
         });
-
-        var url2 = location.origin + pathname + "/spring-core-tasks/manage-and-configure-pojos-with-spring-ioc/property-setting-method-2";
+        var url2 = location.origin + pathname + "/spring-core-tasks/create-pojos-by-invoking-a-constructor/constructor-setting-ambiguity-resolving";
         $.ajax({
             type: "GET",
             dataType: "html",
             url: url2,
             success: function(result){
-                $("#property-setting-method-2-block").html(result);
+                $("#constructor-setting-with-ambiguity-resolving-block").html(result);
+            }
+        });
+        var url3 = location.origin + pathname + "/spring-core-tasks/create-pojos-by-invoking-a-constructor/constructor-setting-ambiguity-resolving-2";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url3,
+            success: function(result){
+                $("#constructor-setting-with-ambiguity-resolving-block-2").html(result);
             }
         });
     });
