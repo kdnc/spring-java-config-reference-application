@@ -45,4 +45,16 @@
         <property name="prefix" value="30" />
     </bean>
 
+
+    <bean id="datePrefixGenerator"
+          class="com.nuwan.model.DatePrefixGenerator">
+        <property name="pattern" value="yyyyMMdd" />
+    </bean>
+
+    <!--Specify POJO References for Setter Methods-->
+    <bean id="sequenceGeneratorForPojoSetterMethodReference"
+          class="com.nuwan.model.SequenceGeneratorV3"
+          p:suffix="A" p:initial="1000000"
+          p:prefixGenerator-ref="datePrefixGenerator" />
+
 </beans>
