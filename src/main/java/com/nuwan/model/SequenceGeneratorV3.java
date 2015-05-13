@@ -8,6 +8,9 @@ public class SequenceGeneratorV3 {
     private int initial;
     private int counter;
     public SequenceGeneratorV3() {}
+    public SequenceGeneratorV3(PrefixGenerator prefixGenerator) {
+        this.prefixGenerator = prefixGenerator;
+    }
     public SequenceGeneratorV3(PrefixGenerator prefixGenerator, String suffix, int initial) {
         this.prefixGenerator = prefixGenerator;
         this.suffix = suffix;

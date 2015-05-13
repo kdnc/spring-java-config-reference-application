@@ -1,0 +1,132 @@
+﻿<!-- widget grid -->
+<section id="widget-grid" class="">
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- NEW WIDGET START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-orange" id="wid-id-0" data-widget-editbutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i> </span>
+                    <h2>Organizing view </h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget edit box -->
+                    <div class="jarviswidget-editbox">
+                        <!-- This area used as dropdown edit box -->
+
+                    </div>
+                    <!-- end widget edit box -->
+
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <h2 class="alert alert-info"> Dependency Injection</h2>
+
+                        <h3 class="alert alert-info"> Setter based Dependency Injection</h3>
+                        <p><span><strong>Setter based dependency injection: </strong></span><span id="setter-based-dependency-injection-block"></span></p>
+
+                        <h3 class="alert alert-info"> Setter based Anonymous Dependency Injection</h3>
+                        <p><span><strong>Setter based anonymous dependency injection: </strong></span><span id="setter-based-anonymous-dependency-injection-block"></span></p>
+
+                        <h3 class="alert alert-info"> Constructor based Dependency Injection</h3>
+                        <p><span><strong>Constructor based dependency injection: </strong></span><span id="constructor-based-dependency-injection-block"></span></p>
+                        <p><span><strong>Constructor based dependency injection Method 2: </strong></span><span id="constructor-based-dependency-injection-block-2"></span></p>
+
+                        <h3 class="alert alert-info"> Constructor based Anonymous Dependency Injection</h3>
+                        <p><span><strong>Constructor based anonymous dependency injection: </strong></span><span id="constructor-based-anonymous-dependency-injection-block"></span></p>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+
+        </article>
+        <!-- WIDGET END -->
+
+
+    </div>
+
+    <!-- end row -->
+
+    <!-- row -->
+
+    <div class="row">
+
+    </div>
+
+    <!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var pathname = location.pathname.split("/static").splice(0)[0];
+
+        var url1 = location.origin + pathname + "/spring-core-tasks/dependencies/dependency-injection/setter-based-dependency-injection";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url1,
+            success: function(result){
+                $("#setter-based-dependency-injection-block").html(result);
+            }
+        });
+
+        var url2 = location.origin + pathname + "/spring-core-tasks/dependencies/dependency-injection/setter-based-anonymous-dependency-injection";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url2,
+            success: function(result){
+                $("#setter-based-anonymous-dependency-injection-block").html(result);
+            }
+        });
+
+        var url3 = location.origin + pathname + "/spring-core-tasks/dependencies/dependency-injection/constructor-based-dependency-injection";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url3,
+            success: function(result){
+                $("#constructor-based-dependency-injection-block").html(result);
+            }
+        });
+
+        var url4 = location.origin + pathname + "/spring-core-tasks/dependencies/dependency-injection/constructor-based-dependency-injection-2";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url4,
+            success: function(result){
+                $("#constructor-based-dependency-injection-block-2").html(result);
+            }
+        });
+
+        var url5 = location.origin + pathname + "/spring-core-tasks/dependencies/dependency-injection/constructor-based-anonymous-dependency-injection";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url5,
+            success: function(result){
+                $("#constructor-based-anonymous-dependency-injection-block").html(result);
+            }
+        });
+    });
+
+</script>
+

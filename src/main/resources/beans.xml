@@ -45,16 +45,73 @@
         <property name="prefix" value="30" />
     </bean>
 
-
     <bean id="datePrefixGenerator"
           class="com.nuwan.model.DatePrefixGenerator">
         <property name="pattern" value="yyyyMMdd" />
     </bean>
 
     <!--Specify POJO References for Setter Methods-->
-    <bean id="sequenceGeneratorForPojoSetterMethodReference"
+    <bean id="sequenceGeneratorSetterBasedDependencyInjection"
           class="com.nuwan.model.SequenceGeneratorV3"
           p:suffix="A" p:initial="1000000"
           p:prefixGenerator-ref="datePrefixGenerator" />
 
+    <!--Specify Anonymous POJO References for Setter Methods-->
+    <bean id="sequenceGeneratorSetterBasedAnonymousDependencyInjection"
+          class="com.nuwan.model.SequenceGeneratorV3">
+        <property name="initial" value="100000" />
+        <property name="suffix" value="A" />
+
+        <property name="prefixGenerator">
+            <bean class="com.nuwan.model.DatePrefixGenerator">
+                <property name="pattern" value="yyyyMMdd" />
+            </bean>
+        </property>
+    </bean>
+
+    <!--Specify POJO References for Constructor Arguments - method 1-->
+    <bean id="sequenceGeneratorConstructorBasedDependencyInjection"
+          class="com.nuwan.model.SequenceGeneratorV3">
+        <constructor-arg>
+            <ref local="datePrefixGenerator" />
+        </constructor-arg>
+        <property name="initial" value="100000" />
+        <property name="suffix" value="A" />
+    </bean>
+
+    <!--Specify POJO References for Constructor Arguments - method 2-->
+    <bean id="sequenceGeneratorConstructorBasedDependencyInjection2"
+          class="com.nuwan.model.SequenceGeneratorV3">
+        <constructor-arg ref="datePrefixGenerator" />
+        <property name="initial" value="100000" />
+        <property name="suffix" value="A" />
+    </bean>
+
+    <!--Specify Anonymous POJO References for Constructor Arguments-->
+    <bean id="sequenceGeneratorConstructorBasedAnonymousDependencyInjection"
+          class="com.nuwan.model.SequenceGeneratorV3">
+        <constructor-arg>
+            <bean class="com.nuwan.model.DatePrefixGenerator">
+                <property name="pattern" value="yyyyMMdd" />
+            </bean>
+        </constructor-arg>
+        <property name="initial" value="100000" />
+        <property name="suffix" value="A" />
+    </bean>
+
+    <!--Resolve Auto-Wire Ambiguity with the Primary Attribute-->
+    <bean id="numberprefixGenerator2"
+          class="com.nuwan.model.NumberPrefixGeneratorV2">
+    </bean>
+
+    <bean id="datePrefixGenerator2" primary="true"
+          class="com.nuwan.model.DatePrefixGeneratorV2">
+    </bean>
+
+    <bean id="sequenceGeneratorAutoWiringWithPrimaryAttribute"
+          class="com.nuwan.model.SequenceGeneratorV4"
+          autowire="byType">
+        <property name="initial" value="100000" />
+        <property name="suffix" value="A" />
+    </bean>
 </beans>
