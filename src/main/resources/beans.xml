@@ -99,19 +99,4 @@
         <property name="suffix" value="A" />
     </bean>
 
-    <!--Resolve Auto-Wire Ambiguity with the Primary Attribute-->
-    <bean id="numberprefixGenerator2"
-          class="com.nuwan.model.NumberPrefixGeneratorV2">
-    </bean>
-
-    <bean id="datePrefixGenerator2" primary="true"
-          class="com.nuwan.model.DatePrefixGeneratorV2">
-    </bean>
-
-    <bean id="sequenceGeneratorAutoWiringWithPrimaryAttribute"
-          class="com.nuwan.model.SequenceGeneratorV4"
-          autowire="byType">
-        <property name="initial" value="100000" />
-        <property name="suffix" value="A" />
-    </bean>
 </beans>

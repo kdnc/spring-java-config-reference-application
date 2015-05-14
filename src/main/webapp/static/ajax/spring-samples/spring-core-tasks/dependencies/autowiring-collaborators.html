@@ -32,6 +32,7 @@
 
                         <h3 class="alert alert-info"> Autowire POJOS</h3>
                         <p><span><strong>Resolve Auto-Wire Ambiguity with the Primary Attribute: </strong></span><span id="auto-wiring-with-primary-attribute-block"></span></p>
+                        <p><span><strong>Resolve Auto-Wire Ambiguity with the Name Attribute: </strong></span><span id="auto-wiring-with-name-attribute-block"></span></p>
 
                     </div>
                     <!-- end widget content -->
@@ -74,6 +75,15 @@
             url: url1,
             success: function(result){
                 $("#auto-wiring-with-primary-attribute-block").html(result);
+            }
+        });
+        var url2 = location.origin + pathname + "/spring-core-tasks/dependencies/autowiring-collaborators/auto-wiring-with-name-attribute";
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: url2,
+            success: function(result){
+                $("#auto-wiring-with-name-attribute-block").html(result);
             }
         });
 
