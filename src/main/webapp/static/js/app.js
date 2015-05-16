@@ -274,9 +274,13 @@ function checkURL() {
     } catch (c) {}
     if (container = $("#content"), a) {
 
-        // If the url contains "spring-api" the view is returned from spring controllers
+        // If the url contains "spring-api" or "javaApi" the view is returned from spring controllers
         if(a.indexOf("spring-api") > -1){
             a = a.split("spring-api").splice(1).join("spring-api");
+            var pathname = location.pathname.split("/static").splice(0)[0];
+            a = location.origin + pathname + a;
+        } else if(a.indexOf("javaApi") > -1){
+            a = a.split("javaApi").splice(1).join("javaApi");
             var pathname = location.pathname.split("/static").splice(0)[0];
             a = location.origin + pathname + a;
         }
