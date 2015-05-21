@@ -14,7 +14,7 @@ public class MySQLSamplesConfiguration {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(Driver.class.getName());
-        dataSource.setUrl("jdbc:mysql://localhost:3306/bookstore");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/mysql_examples");
         dataSource.setUsername("root");
         dataSource.setPassword("123");
         return dataSource;

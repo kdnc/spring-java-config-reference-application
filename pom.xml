@@ -59,7 +59,15 @@
           <version>${org.springframework.security-version}</version>
       </dependency>
 
-      <!-- MySQL database driver -->
+    <!-- Spring test -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${org.springframework-version}</version>
+      </dependency>
+
+
+    <!-- MySQL database driver -->
       <dependency>
           <groupId>mysql</groupId>
           <artifactId>mysql-connector-java</artifactId>
