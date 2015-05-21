@@ -1,0 +1,47 @@
+﻿<section id="widget-grid" class="">
+    <div class="row">
+        <article class="col-sm-12 col-md-12 col-lg-12">
+            <div class="jarviswidget jarviswidget-color-orange" id="wid-id-0" data-widget-editbutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i> </span>
+                    <h2>Using Views To Simplify Table Access </h2>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox">
+                    </div>
+                    <div class="widget-body">
+                        <h2 class="alert alert-info"> Using Views To Simplify Table Access</h2>
+                        <p><span><strong>Using Views To Simplify Table Access: </strong></span></p>
+                        <p><span id="usingViewsToSimplifyTableAccessOutput"></span></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="row">
+    </div>
+</section>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        var pathname = location.pathname.split("/static").splice(0)[0];
+        var url1 = location.origin + pathname + "/mysqlSamples/sqlStatementSyntax/dataDefinitionStatements/usingViewsToSimplifyTableAccess";
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: url1,
+            success: function(resultArr){
+                var result = "<p></p>";
+                for(var i=0; i<resultArr.length; i++){
+                    result += "<p>" + resultArr[i] +  "</p>";
+                }
+                $("#usingViewsToSimplifyTableAccessOutput").html(result);
+            }
+        });
+    });
+
+    //@ sourceURL=usingViewsToSimplifyTableAccess.js
+
+</script>
+
