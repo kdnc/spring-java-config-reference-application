@@ -23,18 +23,17 @@
 # - 5 largest/smallest messages
 
 DROP TABLE IF EXISTS mail;
-#@ _CREATE_TABLE_
+
 CREATE TABLE mail
 (
-  t       DATETIME,    # when message was sent
-  srcuser VARCHAR(8),  # sender (source user and host)
+  t       DATETIME,
+  srcuser VARCHAR(8),
   srchost VARCHAR(20),
-  dstuser VARCHAR(8),  # recipient (destination user and host)
+  dstuser VARCHAR(8),
   dsthost VARCHAR(20),
-  size    BIGINT,      # message size in bytes
+  size    BIGINT,
   INDEX (t)
 );
-#@ _CREATE_TABLE_
 
 INSERT INTO mail (t,srchost,srcuser,dsthost,dstuser,size)
   VALUES
