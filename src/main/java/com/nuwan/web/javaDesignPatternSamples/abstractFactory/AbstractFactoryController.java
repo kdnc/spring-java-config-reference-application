@@ -22,6 +22,16 @@ public class AbstractFactoryController {
 
     List<String> outputArray;
 
+    /**
+     *
+     * The essence of the Abstract Factory pattern is a factory interface
+     * (KingdomFactory) and its implementations (ElfKingdomFactory,
+     * OrcKingdomFactory).
+     *
+     * The example uses both concrete implementations to create a king, a castle and
+     * an army.
+     *
+     */
     @RequestMapping(value = "abstractFactoryV1", method = RequestMethod.GET)
     @ResponseBody
     public List<String> abstractFactoryV1() {

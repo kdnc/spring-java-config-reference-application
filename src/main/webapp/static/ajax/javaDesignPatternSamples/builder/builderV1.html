@@ -1,0 +1,48 @@
+﻿<section id="widget-grid" class="">
+    <div class="row">
+        <article class="col-sm-12 col-md-12 col-lg-12">
+            <div class="jarviswidget jarviswidget-color-orange" id="wid-id-0" data-widget-editbutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i> </span>
+                    <h2>Builder </h2>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox">
+                    </div>
+                    <div class="widget-body">
+                        <button id="useBuilder" class="btn btn-sm btn-primary" type="button">
+                            Use builder
+                        </button>
+                        <p><span id="useBuilderOutput"></span></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="row">
+    </div>
+</section>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $( "#useBuilder" ).click(function() {
+            var pathname = location.pathname.split("/static").splice(0)[0];
+            var url1 = location.origin + pathname + "/javaDesignPatternSamples/builder/builderV1";
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                url: url1,
+                success: function(result){
+                    $('#useBuilderOutput').html(result);
+                }
+            });
+        });
+
+    });
+
+    //@ sourceURL=abstractFactoryV1.js
+
+</script>
+
