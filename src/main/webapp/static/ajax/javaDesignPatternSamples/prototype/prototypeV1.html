@@ -4,16 +4,16 @@
             <div class="jarviswidget jarviswidget-color-orange" id="wid-id-0" data-widget-editbutton="false">
                 <header>
                     <span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i> </span>
-                    <h2>Builder </h2>
+                    <h2>Prototype </h2>
                 </header>
                 <div>
                     <div class="jarviswidget-editbox">
                     </div>
                     <div class="widget-body">
-                        <button id="useBuilder" class="btn btn-sm btn-primary" type="button">
-                            Use builder
+                        <button id="usePrototype" class="btn btn-sm btn-primary" type="button">
+                            Use prototype
                         </button>
-                        <p><span id="useBuilderOutput"></span></p>
+                        <p><span id="usePrototypeOutput"></span></p>
                     </div>
                 </div>
             </div>
@@ -27,22 +27,22 @@
 
     $(document).ready(function(){
 
-        $( "#useBuilder" ).click(function() {
+        $( "#usePrototype" ).click(function() {
             var pathname = location.pathname.split("/static").splice(0)[0];
-            var url1 = location.origin + pathname + "/javaDesignPatternSamples/builder/builderV1";
+            var url1 = location.origin + pathname + "/javaDesignPatternSamples/prototype/prototypeV1";
             $.ajax({
                 type: "GET",
                 dataType: "html",
                 url: url1,
                 success: function(result){
-                    $('#useBuilderOutput').html(result);
+                    $('#usePrototypeOutput').html(result);
                 }
             });
         });
 
     });
 
-    //@ sourceURL=builderV1.js
+    //@ sourceURL=prototypeV1.js
 
 </script>
 
