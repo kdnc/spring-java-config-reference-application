@@ -12,6 +12,7 @@
     <org.springframework-version>4.0.2.RELEASE</org.springframework-version>
     <org.springframework.security-version>4.0.0.RELEASE</org.springframework.security-version>
     <org.slf4j-version>1.6.6</org.slf4j-version>
+    <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
   </properties>
   <dependencies>
     <!-- Spring -->
@@ -211,6 +212,20 @@
               <directory>src/main/resources</directory>
             </resource>
           </webResources>
+        </configuration>
+      </plugin>
+      <!-- The WildFly plugin deploys your ear to a local JBoss
+                    AS container -->
+      <!-- Due to Maven's lack of intelligence with EARs we need
+          to configure the wildfly maven plugin to skip deployment for all modules.
+          We then enable it specifically in the ear module. -->
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>${version.wildfly.maven.plugin}</version>
+        <inherited>true</inherited>
+        <configuration>
+          <skip>false</skip>
         </configuration>
       </plugin>
     </plugins>
